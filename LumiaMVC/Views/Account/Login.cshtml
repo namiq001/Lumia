@@ -1,0 +1,22 @@
+﻿@using LumiaMVC.Views.Account
+@model LoginVM
+<div>
+    <div>
+        <form method="post" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                    <input asp-for="EmailAdress" class="form-control" placeholder="EmailAdress">
+                    <span asp-validation-for="EmailAdress"></span>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                    <input asp-for="Password" class="form-control" placeholder="Password">
+                    <span asp-validation-for="Password"></span>
+                </div>
+                <div>
+                    <button class="btn btn-success" type="submit">Register</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>

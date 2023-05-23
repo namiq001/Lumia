@@ -1,0 +1,35 @@
+﻿@model CreateWorkerVM
+<div>
+    <div>
+        <form method="post" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-md-6 form-group">
+                    <input asp-for="Name" class="form-control" placeholder="Name">
+                    <span asp-validation-for="Name"></span>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                    <input asp-for="Description" class="form-control" placeholder="Description">
+                    <span asp-validation-for="Description"></span>
+                </div>
+                <div class="col-md-6 form-group">
+                    <div class="col-md-3 col-sm-4 col-xs-6 ms-auto">
+                        <select class="form-select shadow-none row border-top" asp-for="WorkTypeId">
+                            @foreach (var item in Model.WorkTypes)
+                            {
+                                <option value="@item.Id">@item.WorkTypeName</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                    <input asp-for="Image" class="form-control" placeholder="Profil Image">
+                    <span asp-validation-for="Image"></span>
+                </div>
+                <div>
+                    <button class="btn btn-success" type="submit">Create Worker</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>
